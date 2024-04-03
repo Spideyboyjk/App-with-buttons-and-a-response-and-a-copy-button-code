@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: blue;
+            border: none;
+            color: white;
+            padding: 10px 100px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 7px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:active {
+            background-color: #0066cc;
+        }
+
+        button span {
+            display: block;
+        }
+
+        button .response {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        button .copy-button {
+            background-color: lightgray;
+            color: black;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        button.active .copy-button {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="button-1" onclick="toggleCopyButton(1)">
+            <span>Button 1</span>
+            <span class="response">Response for Button 1</span>
+            <span class="copy-button" onclick="copyText(1)">Copy</span>
+        </button>
+
+        <!-- Add 19 more buttons here, each with a unique "button-<number>" ID and the same structure -->
+
+    </div>
+
+    <script>
+        function toggleCopyButton(buttonId) {
+            const button = document.getElementById(`button-${buttonId}`);
+            button.classList.toggle('active');
+        }
+
+        function copyText(buttonId) {
+            const button = document.getElementById(`button-${buttonId}`);
+            const response = button.getElementsByClassName('response')[0];
+            const text = response.textContent;
+
+            const input = document.createElement('input');
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+
+            alert(`Copied: ${text}`);
+        }
+    </script>
+</body>
+</html>    <!-- Add 19 more buttons here, each with a unique "button-<number>" ID and the same structure -->
+
+    <!-- Button 2 -->
+    <button id="button-2" onclick="toggleCopyButton(2)">
+        <span>Button 2</span>
+        <span class="response">Response for Button 2</span>
+        <span class="copy-button" onclick="copyText(2)">Copy</span>
+    </button>
+
+    <!-- Button 3 -->
+    <button id="button-3" onclick="toggleCopyButton(3)">
+        <span>Button 3</span>
+        <span class="response">Response for Button 3</span>
+        <span class="copy-button" onclick="copyText(3)">Copy</span>
+    </button>
+
+    <!-- Button 4 -->
+    <button id="button-4" onclick="toggleCopyButton(4)">
+        <span>Button 4</span>
+        <span class="response">Response for Button 4</span>
+        <span class="copy-button" onclick="copyText(4)">Copy</span>
+    </button>
+
+    <!-- Button 5 -->
+    <button id="button-5" onclick="toggleCopyButton(5)">
+        <span>Button 5</span>
+        <span class="response">Response for Button 5</span>
+        <span class="copy-button" onclick="copyText(5)">Copy</span>
+    </button>
+
+    <!-- Button 6 -->
+    <button id="button-6" onclick="toggleCopyButton(6)">
+        <span>Button 6</span>
+        <span class="response">Response for Button 6</span>
+        <span class="copy-button" onclick="copyText(6)">Copy</span>
+    </button>
+
+    <!-- Button 7 -->
+    <button id="button-7" onclick="toggleCopyButton(7)">
+        <span>Button 7</span>
+        <span class="response">Response for Button 7</span>
+        <span class="copy-button" onclick="copyText(7)">Copy</span>
+    </button>
+
+    <!-- Button 8 -->
+    <button id="button-8" onclick="toggleCopyButton(8)">
+        <span>Button 8</span>
+        <span class="response">Response for Button 8</span>
+        <span class="copy-button" onclick="copyText(8)">Copy</span>
+    </button>
+
+    <!-- Button 9 -->
+    <button id="button-9" onclick="toggleCopyButton(9)">
+        <span>Button 9</span>
+        <span class="response">Response for Button 9</span>
+        <span class="copy-button" onclick="copyText(9)">Copy</span>
+    </button>
+
+    <!-- Button 10 -->
+    <button id="button-10" onclick="toggleCopyButton(10)">
+        <span>Button 10</span>
+        <span class="response">Response for Button 10</span>
+        <span class="copy-button" onclick="copyText(10)">Copy</span>
+    </button>
+
+    <!-- Button 11 -->
+    <button id="button-11" onclick="toggleCopyButton(11)">
+        <span>Button 11</span>
+        <span class="response">Response for Button 11</span>
+        <span class="copy-button" onclick="copyText(11)">Copy</span>
+        </button>
+        
+            <!-- Button 12 -->
+    <button id="button-12" onclick="toggleCopyButton(12)">
+        <span>Button 12</span>
+        <span class="response">Response for Button 12</span>
+        <span class="copy-button" onclick="copyText(12)">Copy</span>
+        </button>
+        
+            <!-- Button 13 -->
+    <button id="button-13" onclick="toggleCopyButton(13)">
+        <span>Button 13</span>
+        <span class="response">Response for Button 13</span>
+        <span class="copy-button" onclick="copyText(13)">Copy</span>
+    </button>
+    
+           <!-- Button 14 -->
+    <button id="button-14" onclick="toggleCopyButton(14)">
+        <span>Button 14</span>
+        <span class="response">Response for Button 14</span>
+        <span class="copy-button" onclick="copyText(14)">Copy</span>
+    </button> 
+    
+        <!-- Button 15 -->
+    <button id="button-15" onclick="toggleCopyButton(15)">
+        <span>Button 15</span>
+        <span class="response">Response for Button 15</span>
+        <span class="copy-button" onclick="copyText(15)">Copy</span>
+    </button>
+    
+        <!-- Button 16 -->
+    <button id="button-16" onclick="toggleCopyButton(16)">
+        <span>Button 16</span>
+        <span class="response">Response for Button 16</span>
+        <span class="copy-button" onclick="copyText(16)">Copy</span>
+    </button>
+    
+        <!-- Button 17 -->
+    <button id="button-17" onclick="toggleCopyButton(17)">
+        <span>Button 17</span>
+        <span class="response">Response for Button 17</span>
+        <span class="copy-button" onclick="copyText(17)">Copy</span>
+    </button>
+    
+        <!-- Button 18 -->
+    <button id="button-18" onclick="toggleCopyButton(18)">
+        <span>Button 18</span>
+        <span class="response">Response for Button 18</span>
+        <span class="copy-button" onclick="copyText(18)">Copy</span>
+    </button>
+    
+        <!-- Button 19 -->
+    <button id="button-19" onclick="toggleCopyButton(19)">
+        <span>Button 19</span>
+        <span class="response">Response for Button 19</span>
+        <span class="copy-button" onclick="copyText(19)">Copy</span>
+    </button>
+    
+        <!-- Button 20 -->
+    <button id="button-20" onclick="toggleCopyButton(20)">
+        <span>Button 20</span>
+        <span class="response">Response for Button 20</span>
+        <span class="copy-button" onclick="copyText(20)">Copy</span>
+    </button>
